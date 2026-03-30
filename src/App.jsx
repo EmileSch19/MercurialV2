@@ -1,20 +1,14 @@
-import './App.css'
-import React from 'react'
-
-
-
+import Header from './components/Header'
+import Footer from './components/Footer'
 import Home from './pages/home'
-import About from './pages/about'
-import Contact from './pages/contact'
+
 
 const App = () => {
   return (
     <>
-      
+      <Header />
       <Home />
-      <About />
-      <Contact />
-      
+      <Footer />
     </>
   )
 }

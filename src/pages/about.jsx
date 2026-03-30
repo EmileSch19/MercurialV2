@@ -1,6 +1,6 @@
 import React from 'react'
-import Banner2 from '../components/banner2'
-import Team from '../components/team'
+import Banner2 from '../components/Banner2'
+import Team from '../components/Team'
 
 
 

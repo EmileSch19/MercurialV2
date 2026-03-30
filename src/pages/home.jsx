@@ -1,29 +1,18 @@
 import React from 'react'
-import Header from '../components/header'
-import Main from '../components/main'
-import Product from '../components/product'
-import Banner from '../components/banner'
-import Newsletter from '../components/newsletter'
 
-
-
-
-
-
+import Main from '../components/Main'
+import Product from '../components/Product'
+import Banner from '../components/Banner'
+import Newsletter from '../components/Newsletter'
 
 const Home = () => {
   return (
-    <>
-    <Header/>
     <div className='container'>
-      <Main/>
+      <Main />
       <Product />
-      <Banner/>
+      <Banner />
       <Newsletter />
-
-   </div>
-   
-    </>
+    </div>
   )
 }
 
