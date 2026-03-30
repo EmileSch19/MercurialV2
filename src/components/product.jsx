@@ -6,7 +6,7 @@ import M3 from'../assets/ZM+VAPOR+16+ELITE+FG+LV8.avif'
 
 
 
-const product = () => {
+const Product = () => {
   return (
     <>
     <div className="glass">
@@ -34,4 +34,4 @@ const product = () => {
   )
 }
 
-export default product
+export default Product

@@ -2,7 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { byPrefixAndName } from '@fortawesome/free-solid-svg-icons'
 
-const team = () => {
+const Team = () => {
   return (
     <>
     <div className="team">
@@ -26,4 +26,4 @@ const team = () => {
   )
 }
 
-export default team
+export default Team

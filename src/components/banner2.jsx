@@ -1,7 +1,7 @@
 import React from 'react'
 import nike from "../assets/nike.png"
 
-const banner2 = () => {
+const Banner2 = () => {
   return (
     <>
     <div className="about">
@@ -16,4 +16,4 @@ const banner2 = () => {
   )
 }
 
-export default banner2
+export default Banner2

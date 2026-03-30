@@ -1,6 +1,6 @@
 import React from 'react'
 import '../pages/style.css'
-const banner = () => {
+const Banner = () => {
   return (
     <>
     <div className="pub">
@@ -11,4 +11,4 @@ const banner = () => {
   )
 }
 
-export default banner
+export default Banner
