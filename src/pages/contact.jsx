@@ -1,6 +1,6 @@
 import React from "react"
 import "../pages/style.css"
-import Footer from '../components/footer'
+import Footer from '../components/Footer'
 import contactImg from "../assets/ZM+VAPOR+16+ELITE+FG (2).avif"
 
 const Contact = () => {

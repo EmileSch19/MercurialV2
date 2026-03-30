@@ -6,9 +6,9 @@ import Home from './pages/home'
 const App = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Home />
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
