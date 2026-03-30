@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ================= GLOBAL ================= */
+
+:root {
+  --primary: #000000;
+  --secondary: #ffffff;
+  --accent: #ff3c3c;
+  --gray: #bfbaba;
+  --text: #222;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--secondary);
+  color: var(--text);
+}
+
+/* ================= HEADER ================= */
+
+.navbar {
+  height: 3vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: var(--text);
+  transition: 0.3s;
+}
+
+.nav ul li a:hover {
+  color: var(--accent);
+}
+
+/* ================= HERO ================= */
+
+.menu {
+  height: 80vh;
+  background-image: url('../assets/Mercurial.png');
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  position: relative;
+}
+
+.menu::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.overlay {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.cta-1 {
+  padding: 10px 25px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta-1:hover {
+  background: #cc2f2f;
+}
+
+/* ================= PRODUCTS ================= */
+
+.boxes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+}
+
+.glass {
+  background: var(--gray);
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.glass:hover {
+  transform: translateY(-5px);
+}
+
+.product-img {
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.banner img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* ================= NEWSLETTER ================= */
+
+.news {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px;
+  background: var(--gray);
+  border-radius: 10px;
+}
+
+.news.reverse {
+  flex-direction: row-reverse;
+}
+
+.left img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.right {
+  max-width: 400px;
+}
+
+button {
+  padding: 10px 25px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #cc2f2f;
+}
+
+/* ================= ABOUT ================= */
+
+.about {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 800px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ================= TEAM ================= */
+
+.team {
+  text-align: center;
+  padding: 40px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.card span {
+  color: gray;
+  font-size: 12px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact {
+  padding: 50px;
+  text-align: center;
+}
+
+.contact-top {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 250px;
+}
+
+.form input,
+.form textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  border: 1px solid var(--accent);
+}
+
+.contact-img img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin: 40px 0;
+}
+
+.map img {
+  width: 100%;
+  max-width: 800px;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* ================= Footer ================= */
+.text{
+  text-align: center;
+}
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  .boxes,
+  .news,
+  .contact-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu {
+    padding-left: 20px;
+  }
+}
