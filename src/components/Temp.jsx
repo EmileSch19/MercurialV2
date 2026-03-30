@@ -1,7 +1,7 @@
 import React from 'react'
 import '../pages/style.css'
 
-const Main = () => {
+const Temp = () => {
   return (
     <>
 
@@ -16,4 +16,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default Temp
