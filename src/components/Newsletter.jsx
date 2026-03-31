@@ -1,6 +1,7 @@
 import React from 'react'
 import '../pages/style.css'
 import elite from "../assets/ZM+VAPOR+16+ELITE+FG+LV8 (2).avif"
+import elite2 from "../assets/ZM+VAPOR+16+ELITE+FG+LV8 (1).avif"
 
 const Newsletter = () => {
   return (
@@ -22,7 +23,7 @@ const Newsletter = () => {
       {/* Bloc 2 (inversé) */}
       <div className="news reverse">
         <div className="left">
-          <img src={elite} alt="" />
+          <img src={elite2} alt="" />
         </div>
 
         <div className="right">
