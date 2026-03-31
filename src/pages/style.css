@@ -20,25 +20,38 @@ body {
 /* ================= HEADER ================= */
 
 .navbar {
-  height: 3vh;
+  background-color: #000000;
+  color: #ccc;
+  height: 60px; /* 🔥 mieux que 3vh */
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 15px 40px;
+  padding: 0 40px;
 }
 
+.logo {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* NAV */
 .nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
   padding: 0;
+  margin: 0;
 }
 
+/* LINK */
 .nav ul li a {
   text-decoration: none;
-  color: var(--text);
+  color: var(--secondary);
   transition: 0.3s;
+  font-weight: 500;
 }
 
+/* HOVER */
 .nav ul li a:hover {
   color: var(--accent);
 }

@@ -4,9 +4,8 @@ import Temp from '../components/Temp'
 import Product from '../components/Product'
 import Banner from '../components/Banner'
 import Newsletter from '../components/Newsletter'
-import Contact from '../pages/contact'
-import Testamonial from '../components/Testamonial'
-import About from '../pages/about'
+import Header from '../components/Header'
+
 
 
 const Home = () => {
@@ -16,9 +15,6 @@ const Home = () => {
       <Product />
       <Banner />
       <Newsletter />
-      <Testamonial/>
-      <About />
-      <Contact />
     </div>
   )
 }
