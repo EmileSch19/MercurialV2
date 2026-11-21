@@ -1,9 +1,10 @@
 import { useState } from "react"
-import contactImg from "../assets/ZM+VAPOR+16+ELITE+FG (2).avif"
+import usePageTitle from "../usePageTitle"
 
 const emptyForm = { name: "", email: "", subject: "", message: "" }
 
 const Contact = () => {
+  usePageTitle("Contact")
   const [form, setForm] = useState(emptyForm)
   const [sent, setSent] = useState(false)
 
@@ -11,53 +12,49 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Démo front-end : pas encore de back-end, on confirme simplement côté client
+    // Démo front-end : aucun message n'est envoyé
     setSent(true)
     setForm(emptyForm)
   }
 
   return (
-    <section className="contact">
-      <h1>Contact</h1>
+    <section className="wrap section narrow">
+      <h1 className="h1 h1-page">Contact</h1>
+      <p className="lead">Une question sur une pointure ou une commande ? Écrivez-nous.</p>
 
-      <div className="contact-top">
+      <div className="contact-grid">
         {sent ? (
-          <div className="form form-success" role="status">
-            <p>Thanks, your message has been received (demo — nothing is actually sent).</p>
-            <button type="button" onClick={() => setSent(false)}>Send another message</button>
+          <div className="panel" role="status">
+            <p className="success">Merci, votre message a bien été reçu (démo : rien n’est réellement envoyé).</p>
+            <button type="button" className="btn btn-ghost" onClick={() => setSent(false)}>Envoyer un autre message</button>
           </div>
         ) : (
-          <form className="form" onSubmit={handleSubmit}>
-            <label htmlFor="name">Name</label>
-            <input id="name" name="name" type="text" required value={form.name} onChange={update} />
+          <form className="panel form" onSubmit={handleSubmit}>
+            <label htmlFor="name">Nom</label>
+            <input id="name" name="name" type="text" autoComplete="name" required value={form.name} onChange={update} />
 
-            <label htmlFor="email">Email</label>
-            <input id="email" name="email" type="email" required value={form.email} onChange={update} />
+            <label htmlFor="email">E-mail</label>
+            <input id="email" name="email" type="email" autoComplete="email" required value={form.email} onChange={update} />
 
-            <label htmlFor="subject">Subject</label>
+            <label htmlFor="subject">Objet</label>
             <input id="subject" name="subject" type="text" value={form.subject} onChange={update} />
 
             <label htmlFor="message">Message</label>
             <textarea id="message" name="message" rows="5" required value={form.message} onChange={update}></textarea>
 
-            <button type="submit">Send</button>
+            <button type="submit" className="btn">Envoyer</button>
           </form>
         )}
 
-        <div className="contact-img">
-          <img src={contactImg} alt="Mercurial Vapor 16 Elite FG boot" loading="lazy" />
-        </div>
-      </div>
-
-      <div className="contact-info">
-        <div>
-          <h2>Location</h2>
-          <p>Lyon, France</p>
-        </div>
-
-        <div>
-          <h2>Open hours</h2>
-          <p>Mon–Fri<br />9am – 6pm</p>
+        <div className="contact-info">
+          <div>
+            <h2 className="card-title">Où</h2>
+            <p className="muted">Lyon, France</p>
+          </div>
+          <div>
+            <h2 className="card-title">Horaires</h2>
+            <p className="muted">Lun – ven<br />9 h – 18 h</p>
+          </div>
         </div>
       </div>
     </section>
