@@ -1,22 +1,27 @@
-# Mercurial Shop
+# Vélox — boutique de crampons (React)
 
-Storefront for football boots built with React. Student project by Emile Dufoulon, not affiliated with Nike.
+Mini-boutique e-commerce front-end pour une marque fictive de crampons de football. Projet étudiant d'Emile Dufoulon : produits, prix et visuels sont des exemples, aucun paiement n'est réel.
 
-**Live:** https://mercurial-v2.vercel.app/
+**En ligne :** https://mercurial-v2.vercel.app/
+
+## Fonctionnalités
+
+- Catalogue filtrable par terrain et triable par prix (filtres gardés dans l'URL : `/catalogue?cat=fg&tri=asc`)
+- Fiche produit (`/produit/:slug`) avec choix de la pointure et produits de la même catégorie
+- Panier mémorisé dans le navigateur (`localStorage`) : quantités, suppression, total, commande de démonstration
+- Mode clair / sombre (préférence système par défaut, choix mémorisé, sans flash au chargement)
+- Responsive, navigable au clavier (lien d'évitement, focus visibles, libellés de formulaires)
 
 ## Stack
 
-- React 19 + Vite
-- React Router 7 (pages: Home, About, Contact, 404)
-- CSS (no framework), Font Awesome
-- Deployed on Vercel (`vercel.json` sends every route to `index.html`)
+React 19 · React Router 7 · Vite · CSS sans framework (variables par thème) · Fontsource (Space Grotesk, Inter) · Vercel
 
-## Run locally
+## Lancer le projet
 
 ```bash
 npm install
-npm run dev      # development server
-npm run build    # production build in dist/
+npm run dev      # serveur de développement
+npm run build    # build de production dans dist/
 npm run lint
 ```
 
@@ -24,10 +29,10 @@ npm run lint
 
 ```
 src/
-  App.jsx          routes + shared layout (Header, Footer)
-  pages/           Home, About, Contact, NotFound, style.css
-  components/      Hero, Product, Banner, Newsletter, Testimonial, Team…
-  assets/          product images
+  data/products.js        catalogue (ajouter un produit = ajouter un objet)
+  context/CartContext.jsx panier (useReducer + localStorage)
+  components/             Header, Footer, ProductCard, BootIllustration, ThemeToggle, Newsletter
+  pages/                  Home, Catalogue, ProductPage, Cart, About, Contact, NotFound, style.css
 ```
 
-The contact and newsletter forms are front-end only: they validate the input and show a confirmation, but nothing is sent.
+Les formulaires (contact, newsletter) valident la saisie et affichent une confirmation, mais n'envoient rien.

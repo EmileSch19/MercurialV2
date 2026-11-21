@@ -1,11 +1,14 @@
 import { Link } from 'react-router-dom'
+import usePageTitle from '../usePageTitle'
 
 const NotFound = () => {
+  usePageTitle('Page introuvable')
+
   return (
-    <section className="not-found">
-      <h1>Page not found</h1>
-      <p>This page doesn't exist or has been moved.</p>
-      <Link to="/" className="cta-1">Back to home</Link>
+    <section className="wrap section empty">
+      <h1 className="h1 h1-page">Page introuvable</h1>
+      <p className="lead">Cette page n’existe pas ou a été déplacée.</p>
+      <Link to="/" className="btn">Retour à l’accueil</Link>
     </section>
   )
 }
