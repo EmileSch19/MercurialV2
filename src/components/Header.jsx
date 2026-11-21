@@ -1,19 +1,18 @@
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 const Header = () => {
   return (
-    <div className="navbar">
-      <div className="logo">Mercurial</div>
+    <header className="navbar">
+      <Link to="/" className="logo">Mercurial</Link>
 
-      <div className="nav"> {/* 🔥 important */}
+      <nav className="nav" aria-label="Main navigation">
         <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          <li><NavLink to="/" end>Home</NavLink></li>
+          <li><NavLink to="/about">About</NavLink></li>
+          <li><NavLink to="/contact">Contact</NavLink></li>
         </ul>
-      </div>
-
-    </div>
+      </nav>
+    </header>
   )
 }
 

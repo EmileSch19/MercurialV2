@@ -5,7 +5,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 const Testimonial = () => {
   return (
     <div className="glass">
-      <h1>Testimonials</h1>
+      <h2>Testimonials</h2>
       <p>People love this</p>
 
       <div className="boxes">

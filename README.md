@@ -1,16 +1,33 @@
-# React + Vite
+# Mercurial Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Storefront for football boots built with React. Student project by Emile Dufoulon, not affiliated with Nike.
 
-Currently, two official plugins are available:
+**Live:** https://mercurial-v2.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
+- React 19 + Vite
+- React Router 7 (pages: Home, About, Contact, 404)
+- CSS (no framework), Font Awesome
+- Deployed on Vercel (`vercel.json` sends every route to `index.html`)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Run locally
 
-## Expanding the ESLint configuration
+```bash
+npm install
+npm run dev      # development server
+npm run build    # production build in dist/
+npm run lint
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Structure
+
+```
+src/
+  App.jsx          routes + shared layout (Header, Footer)
+  pages/           Home, About, Contact, NotFound, style.css
+  components/      Hero, Product, Banner, Newsletter, Testimonial, Team…
+  assets/          product images
+```
+
+The contact and newsletter forms are front-end only: they validate the input and show a confirmation, but nothing is sent.
